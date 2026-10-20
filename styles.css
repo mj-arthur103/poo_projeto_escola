@@ -90,7 +90,3 @@ input:focus {
 
 /* Estilo Simples para tebela */
 
-table, th, td { /* "table" para criar uma tabela, "tr" é o cabeçalho da coluna, "tr" define a linha da tabela, "td" define a coluna */ 
-  border: 1px;
-  color: solid black;
-}

@@ -24,24 +24,15 @@
     tabListar.classList.add('active');
     tabCadastrar.classList.remove('active');
     let lista = "<table>";
-    lista += "<tr> <th>Nome:</th> <th>Média:</th> <th>Situação:</th> </tr>";
+    lista += "<tr> <th>Nome</th> <th>Média</th> <th>Situação</th> </tr>";
     for(let i=0;i<turma.length;i++){
-        <th>Nome:</th>
-        lista = 
-          <tr>
-            lista +turma[i].nome+
-          </tr> 
-
-        <th>Média:</th>  
-          <tr>
-          turma[i].media.toFixed(2) + 
-          </tr>
-
-        <th>Situação:</th>
-          <tr> 
-          turma[i].estado +
-          </tr> 
-      '<br></br>';
+        lista += '<tr>';
+        lista += '<td>' + turma[i].nome + '</td>';
+        lista += '<td>' + turma[i].media.toFixed(2) + '</td>';
+        let classe = turma[i].estado == "Aprovado" ? "aprovado" : turma[i].estado == "Reprovado" ? "reprovado" : "recuperacao";
+        lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
+        lista += '</tr>'; 
+        
     }
     lista += '</table>';
     document.getElementById("lista-alunos").innerHTML = lista;
