@@ -23,9 +23,9 @@
     // Ajusta o conteúdo visível
     tabListar.classList.add('active');
     tabCadastrar.classList.remove('active');
-    let lista = " ";
+    let lista = "<table>";
+    lista += "<tr> <th>Nome:</th> <th>Média:</th> <th>Situação:</th> </tr>";
     for(let i=0;i<turma.length;i++){
-      <table>
         <th>Nome:</th>
         lista = 
           <tr>
@@ -42,8 +42,8 @@
           turma[i].estado +
           </tr> 
       '<br></br>';
-      </table>
     }
+    lista += '</table>';
     document.getElementById("lista-alunos").innerHTML = lista;
     
   }
