@@ -30,4 +30,12 @@ class Aluno{
     this.estado = est;
     return est;
   }
+  gerarNotaRecuperacao(media){
+    let nr = null;
+    if(this.estado == "Recuperação"){
+      nr = 12 - media;
+    }
+    this.notaRecuperacao = nr;
+    return nr;
+  }
   }//fim da classe
