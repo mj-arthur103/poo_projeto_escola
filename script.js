@@ -29,10 +29,10 @@
         lista += '<tr>';
         lista += '<td>' + turma[i].nome + '</td>';
         lista += '<td>' + turma[i].media.toFixed(2) + '</td>';
-        let classe = turma[i].estado == "Aprovado" ? "aprovado" : turma[i].estado == "Reprovado" ? "reprovado" : "recuperacao";
+        //Operador ternario igual o if e else "?", implica q a primeira afirmação é true, e se for faz oq está depois, se for false faz oq tá dps do ":"
+        let classe = turma[i].estado == "Aprovado" ? "aprovado" : turma[i].estado == "Reprovado" ? "reprovado" : "recuperacao"; 
         lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
         lista += '</tr>'; 
-        
     }
     lista += '</table>';
     document.getElementById("lista-alunos").innerHTML = lista;

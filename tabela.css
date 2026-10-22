@@ -3,41 +3,40 @@
 /* Tabela ocupando toda a largura da aba */
 #lista-alunos table {
   width: 100%;
-  border-collapse: collapse; /* junta as bordas das células em uma só */
+  border-collapse: collapse; /* mantém "separate" para o border-radius funcionar */
   font-size: 14px;
   border-radius: 6px;
-  overflow: hidden; /* faz o arredondamento valer para os cantos */
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  /*overflow: hidden; /* faz o arredondamento valer para os cantos */
 }
 
 /* Células do cabeçalho e dos dados */
 #lista-alunos th,
 #lista-alunos td {
   padding: 10px 8px;
-  text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+/* Linha separando cada aluno */
+#lista-alunos td {
+  border: 1px solid #000000;
 }
 
 /* Cabeçalho com a mesma cor azul das abas */
 #lista-alunos th {
   background-color: #007bff;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
 /* Linhas zebradas para facilitar a leitura */
 #lista-alunos tr:nth-child(even) td {
-  background-color: #f7f9fc;
+  background-color: #ffffff;
 }
 
 /* Destaque da linha ao passar o mouse */
 #lista-alunos tr:hover td {
-  background-color: #e8f1ff;
-}
-
-/* Remove a borda da última linha */
-#lista-alunos tr:last-child td {
-  border-bottom: none;
+  background-color: #d0d9e7;
 }
 
 /* Coluna da média centralizada */
