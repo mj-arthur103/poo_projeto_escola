@@ -25,18 +25,23 @@
     // Ajusta o conteúdo visível
     tabListar.classList.add('active');
     tabCadastrar.classList.remove('active');
+    
     let lista = "<table>";
     lista += "<tr> <th>Nome</th> <th>Média</th> <th>Situação</th>  <th>Nota de Recuperação</th> </tr>";
+    
     for(let i=0;i<turma.length;i++){
-        lista += '<tr>';
-        lista += '<td>' + turma[i].nome + '</td>';
-        lista += '<td>' + turma[i].media.toFixed(2) + '</td>';
-        //Operador ternario igual o if e else "?", implica q a primeira afirmação é true, e se for faz oq está depois, se for false faz oq tá dps do ":"
-        let classe = turma[i].estado == "Aprovado" ? "aprovado" : turma[i].estado == "Reprovado" ? "reprovado" : "recuperacao"; 
-        // Variavel Classe é só para poder adicionar a cor do css
-        lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
-        lista += '<td>' + (turma[i].notaRecuperacao !== null ? turma[i].notaRecuperacao.toFixed(2) : '') + '</td>';
-        lista += '</tr>'; 
+      
+      lista += '<tr>';
+      lista += '<td>' + turma[i].nome + '</td>';
+      lista += '<td>' + turma[i].media.toFixed(2) + '</td>';
+        
+      //Operador ternario igual o if e else "?", implica q a primeira afirmação é true, e se for faz oq está depois, se for false faz oq tá dps do ":"
+      let classe = turma[i].estado == "Aprovado" ? "aprovado" : turma[i].estado == "Reprovado" ? "reprovado" : "recuperacao"; 
+        
+      // Variavel Classe é só para poder adicionar a cor do css
+      lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
+      lista += '<td>' + (turma[i].notaRecuperacao !== null ? turma[i].notaRecuperacao.toFixed(2) : '') + '</td>';
+      lista += '</tr>';
     }
     lista += '</table>';
     document.getElementById("lista-alunos").innerHTML = lista;
