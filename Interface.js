@@ -19,6 +19,7 @@ class Interface{
         return a1;
     }
     
+
     static listar(turma) {
         const btnCadastrar = document.getElementById('btn-cadastrar');
         const tabCadastrar = document.getElementById('tab-cadastrar');
