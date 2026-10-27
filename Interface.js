@@ -39,7 +39,7 @@ class Interface{
         for(let i=0;i<turma.length;i++){
             
           lista += '<tr>';
-          lista += '<td>' + turma[i].nome + '</td>';
+          lista += '<td>' + turma[i].getNome() + '</td>';
           lista += '<td>' + turma[i].media.toFixed(2) + '</td>';
               
           //Operador ternario igual o if e else "?", implica q a primeira afirmação é true, e se for faz oq está depois, se for false faz oq tá dps do ":"
@@ -48,6 +48,7 @@ class Interface{
           // Variavel Classe é só para poder adicionar a cor do css
           lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
           lista += '<td>' + (turma[i].notaRecuperacao !== null ? turma[i].notaRecuperacao.toFixed(2) : '') + '</td>';
+          lista += '<td>' ;
           lista += '</tr>';
         }
         

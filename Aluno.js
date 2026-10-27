@@ -1,12 +1,13 @@
 class Aluno{
-  nome;
+  // "#" o atributo se torna privado, sem o atributo é publico
+  #nome;
   nota1;
   nota2;
   nota3;
   estado;
   media;
   constructor(nome,nota1,nota2,nota3){
-      this.nome = nome;
+      this.#nome = nome;
       this.nota1 = nota1;
       this.nota2 = nota2;
       this.nota3 = nota3;
@@ -38,4 +39,10 @@ class Aluno{
     this.notaRecuperacao = nr;
     return nr;
   }
-  }//fim da classe
+  getNome(){
+    return this.#nome;
+  }
+  setNome(nome){
+    this.#nome= nome;
+  }
+}//fim da classe
