@@ -9,7 +9,11 @@ function salvar(){
     let aluno = Interface.salvar();
     turma.push(aluno); //o ".push", é igual o turma[turma.lenght], ele tá armazenando o tamanho do vetor
 }
+/*
+Função de "faxada" para usar o cadastrar, mas a gente tá chamando direto no html
 
 function cadastrar(){
     Interface.cadastrar();
 }
+*/
+
