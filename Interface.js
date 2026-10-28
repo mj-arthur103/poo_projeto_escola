@@ -34,12 +34,15 @@ class Interface{
         tabCadastrar.classList.remove('active');
           
         let lista = "<table>";
-        lista += "<tr> <th>Nome</th> <th>Média</th> <th>Situação</th>  <th>Nota de Recuperação</th> </tr>";
+        lista += "<tr> <th>Nome</th> <th>Nota 1</th> <th>Nota 2</th> <th>Nota 3</th> <th>Média</th> <th>Situação</th>  <th>Nota de Recuperação</th> </tr>";
           
         for(let i=0;i<turma.length;i++){
             
           lista += '<tr>';
           lista += '<td>' + turma[i].getNome() + '</td>';
+          lista += '<td>' + turma[i].getNota1().toFixed(2) + '</td>';
+          lista += '<td>' + turma[i].getNota2().toFixed(2) + '</td>';
+          lista += '<td>' + turma[i].getNota3().toFixed(2) + '</td>';
           lista += '<td>' + turma[i].media.toFixed(2) + '</td>';
               
           //Operador ternario igual o if e else "?", implica q a primeira afirmação é true, e se for faz oq está depois, se for false faz oq tá dps do ":"
@@ -48,7 +51,11 @@ class Interface{
           // Variavel Classe é só para poder adicionar a cor do css
           lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
           lista += '<td>' + (turma[i].notaRecuperacao !== null ? turma[i].notaRecuperacao.toFixed(2) : '') + '</td>';
-          lista += '<td><button class="btn_editar" onclick="editarNome(' + i + ')">Editar</button></td>';
+          
+          lista += '<td class="editar">';
+          lista += '<button class="btn_editar" onclick="editarNome(' + i + ')">Editar Nome</button>';
+          lista += '<button class="btn_editar" onclick="editarNota(' + i + ')">Editar Notas</button>';
+          lista += '</td>';
           lista += '</tr>';
         }
         

@@ -28,9 +28,9 @@
       Nome: <input id="nome" type="text">
       <!--"oninput" é um comando do "js" utilizado no "html", ent precisa do ";"-->
       <!--"oninput" ele faz alterações de texto, quando o usuario terminar de digitar-->
-      Nota 1: <input id="n1" type="number" step="2" oninput="if(this.value > 10 || this.value < 0) this.value = ''; "> 
-      Nota 2: <input id="n2" type="number" step="2">
-      Nota 3: <input id="n3" type="number" step="2">
+      Nota 1: <input id="n1" type="number" step="2" oninput="if(this.value > 10 || this.value < 0) this.value = ''; "min="0" max="10"> 
+      Nota 2: <input id="n2" type="number" step="2" oninput="if(this.value > 10 || this.value < 0) this.value = ''; " min="0" max="10">
+      Nota 3: <input id="n3" type="number" step="2" oninput="if(this.value > 10 || this.value < 0) this.value = ''; " min="0" max="10">
       <button onclick="salvar()" class="btn-salvar">Salvar Aluno</button>
     </div>
 

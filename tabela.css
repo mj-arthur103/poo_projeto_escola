@@ -34,13 +34,19 @@
   background-color: #ffffff;
 }
 
-/* Destaque da linha ao passar o mouse */
-#lista-alunos tr:hover td {
+/* Destaque da linha inteira ao passar o mouse (menos a célula dos botões) ":not()" é para espeficicar oq não é para muder*/
+#lista-alunos tr:hover td:not(.editar) {
   background-color: #d0d9e7;
 }
 
+/* Célula dos botões: sem borda e sem fundo, parece que tá fora da tabela mas continua na mesma linha do aluno */
+#lista-alunos td.editar,
+#lista-alunos tr:nth-child(even) td.editar {
+  border: none;
+  background-color: transparent;
+}
+
 /* Coluna da média centralizada */
-#lista-alunos th:nth-child(2),
 #lista-alunos td:nth-child(2) {
   text-align: center;
 }
@@ -59,4 +65,22 @@
 .reprovado {
   color: #dc3545;
   font-weight: bold;
+}
+
+.btn_editar{
+  padding: 5px 10px;
+  margin: 2px; /* adiciona um pequeno espaço entre os botões */
+  
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s; /* deixa a mudança do hover suave */
+}
+
+.btn_editar:hover{
+  background-color: #e0a800;
+  transform: scale(1.05); /* aumenta um pouquinho o botão */
 }
