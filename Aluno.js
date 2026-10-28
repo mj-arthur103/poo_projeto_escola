@@ -31,10 +31,13 @@ class Aluno{
     this.estado = est;
     return est;
   }
-  gerarNotaRecuperacao(media){
+  gerarNotaRecuperacao(){
     let nr = null;
     if(this.estado == "Recuperação"){
-      nr = 12 - media;
+      let menor= Math.min(this.#nota1,this.#nota2,this.#nota3);
+      let soma = this.#nota1 + this.#nota2 + this.#nota3;
+      nr = 15 - (soma - menor);
+      nr= Math.max(nr,4);
     }
     this.notaRecuperacao = nr;
     return nr;
