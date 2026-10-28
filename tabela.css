@@ -69,8 +69,6 @@
 
 .btn_editar{
   padding: 5px 10px;
-  margin: 2px; /* adiciona um pequeno espaço entre os botões */
-  
   background-color: #ffc107;
   color: white;
   border: none;
@@ -78,6 +76,11 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s, transform 0.2s; /* deixa a mudança do hover suave */
+}
+
+.editar{
+  display:  flex;
+  gap: 4px;
 }
 
 .btn_editar:hover{
