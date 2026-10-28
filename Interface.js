@@ -48,7 +48,7 @@ class Interface{
           // Variavel Classe é só para poder adicionar a cor do css
           lista += '<td class="' + classe + '">' + turma[i].estado + '</td>';
           lista += '<td>' + (turma[i].notaRecuperacao !== null ? turma[i].notaRecuperacao.toFixed(2) : '') + '</td>';
-          lista += '<td><button class="btn_editar" onclick="editar(' + i + ')">Editar</button></td>';
+          lista += '<td><button class="btn_editar" onclick="editarNome(' + i + ')">Editar</button></td>';
           lista += '</tr>';
         }
         

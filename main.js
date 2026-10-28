@@ -5,6 +5,15 @@ function listar(){
     Interface.listar(turma);
 }
 
+function editarNome(i){
+    let aluno = turma[i];
+    let novoNome = prompt("Digite o novo nome do aluno:", aluno.getNome());
+    if(novoNome !== null && novoNome.trim() !== "") {
+        aluno.setNome(novoNome);
+        listar();
+}
+}
+
 function salvar(){
     let aluno = Interface.salvar();
     turma.push(aluno); //o ".push", é igual o turma[turma.lenght], ele tá armazenando o tamanho do vetor
