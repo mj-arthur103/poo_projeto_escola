@@ -88,4 +88,12 @@ input:focus {
   font-size: 14px;
 }
 
-
+.btn_editar{
+  padding: 5px 10px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
