@@ -9,11 +9,25 @@ class Interface{
         let n1 = Number(document.getElementById("n1").value);
         let n2 = Number(document.getElementById("n2").value);
         let n3 = Number(document.getElementById("n3").value);
+
+        if(nome == ""){
+            alert("Coloque o nome do aluno.");
+            return;
+        }
+        
+        if(n1 == null || n1 == "" || n2=="" || n2 == null || n3 == null || n3 == "" || 
+           n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10 || n3 < 0 || n3 > 10){
+            
+            alert("As notas devem estar entre 0 e 10.");
+            return;
+        }
+
         let a1 = new Aluno(nome,n1,n2,n3);
         let m = a1.gerarMedia(n1,n2,n3);
         let e = a1.gerarEstado(m);
         let r = a1.gerarNotaRecuperacao(m);
-      
+        
+        
         alert("Aluno Cadastrado")
         
         return a1;
