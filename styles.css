@@ -89,3 +89,18 @@ input:focus {
 }
 
 
+
+/* Caixa de seleção da turma, com o mesmo visual dos inputs */
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}

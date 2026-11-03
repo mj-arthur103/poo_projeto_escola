@@ -4,6 +4,56 @@ class Interface{
 
     }
     
+    static salvarTurma(){
+        let professor = document.getElementById("professor").value.trim();
+        let curso = document.getElementById("curso").value.trim();
+
+        if(professor == "" || curso == ""){
+            alert("Preencha o professor e o curso.");
+            return;
+        }
+
+        let t = new Turma(professor, curso);
+
+        document.getElementById("professor").value = "";
+        document.getElementById("curso").value = "";
+        alert("Turma Cadastrada");
+
+        return t;
+    }
+
+    // Atualiza os <select> de turma e a tabela de turmas
+    static atualizarTurmas(turmas){
+        const selects = [document.getElementById("turma-aluno"), document.getElementById("turma-lista")];
+
+        for(let s=0;s<selects.length;s++){
+            let selecionada = selects[s].value; // guarda a escolha atual
+            let opcoes = "";
+            if(turmas.length == 0){
+                opcoes = '<option value="">Nenhuma turma cadastrada</option>';
+            }
+            for(let i=0;i<turmas.length;i++){
+                opcoes += '<option value="' + i + '">' + turmas[i].getCurso() + ' - Prof. ' + turmas[i].getProfessor() + '</option>';
+            }
+            selects[s].innerHTML = opcoes;
+            if(selecionada !== ""){
+                selects[s].value = selecionada;
+            }
+        }
+
+        let lista = "<table>";
+        lista += "<tr> <th>Curso</th> <th>Professor</th> <th>Qtd. de Alunos</th> </tr>";
+        for(let i=0;i<turmas.length;i++){
+            lista += '<tr>';
+            lista += '<td>' + turmas[i].getCurso() + '</td>';
+            lista += '<td>' + turmas[i].getProfessor() + '</td>';
+            lista += '<td>' + turmas[i].getQuantidadeAlunos() + '</td>';
+            lista += '</tr>';
+        }
+        lista += '</table>';
+        document.getElementById("lista-turmas").innerHTML = turmas.length == 0 ? "" : lista;
+    }
+
     static salvar(){ //isso é um metodo estatico, n vou precisar criar um objeto toda hora para usar, não vou precisar o "new" mais de uma vez
         let nome = document.getElementById("nome").value
         let n1 = Number(document.getElementById("n1").value);
