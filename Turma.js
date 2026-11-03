@@ -12,8 +12,13 @@ class Turma{
     adicionarAluno(aluno){
         this.#alunos.push(aluno);
     }
-    getAluno(i){
-        return this.#alunos[i];
+    getAluno(nome){
+        for(let i=0; i<this.#alunos.length; i++){
+            if(this.#alunos[i].getNome() == nome){
+                return this.#alunos[i];
+            }
+        }
+        return null;
     }
     getAlunos(){
         return this.#alunos;
