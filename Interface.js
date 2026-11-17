@@ -22,15 +22,19 @@ class Interface{
 
     // ----- TURMA -----
     static salvarTurma(){
-        let professor = document.getElementById("professor").value.trim();
+        let nomeProfessor = document.getElementById("professor").value.trim();
         let curso = document.getElementById("curso").value.trim();
+        let mat = document.getElementById("mat").value.trim();
+        let est = document.getElementById("est").value.trim();
 
-        if(professor == "" || curso == ""){
+        let p = new Professor(nomeProf, mat, est);
+
+        if(nomeProfessor == "" || curso == ""){
             alert("Preencha o professor e o curso.");
             return;
         }
 
-        let t = new Turma(professor, curso);
+        let t = new Turma(nomeProfessor, curso);
 
         document.getElementById("professor").value = "";
         document.getElementById("curso").value = "";

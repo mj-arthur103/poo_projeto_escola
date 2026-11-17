@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="./tabela.css">
 
     <!--<script src="./script.js" defer></script> "defer" faz para seguir a ordem correta, classe vem depois das funções -->
+
+    <script src="./Pessoa.js" defer></script>
     <script src="./Aluno.js" defer></script>
+    <script src="./Professor.js" defer></script>
     <script src="./Turma.js" defer></script>
     <script src="./Interface.js" defer></script>
     <script src="./main.js" defer></script>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sistema Escolar</title>
@@ -29,6 +32,8 @@
     <div id="tab-turma" class="tab-content active">
       Professor: <input id="professor" type="text">
       Curso: <input id="curso" type="text">
+      Matricula: <input id="mat" type="text">
+      Estado: <input id="est" type="text">
       <button onclick="salvarTurma()" class="btn-salvar">Salvar Turma</button>
 
       <div id="lista-turmas"></div>
