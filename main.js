@@ -19,8 +19,8 @@ function listar(){
     Interface.listar(turmaSelecionada());
 }
 
-function editarNome(i){
-    let aluno = turmaSelecionada().getAluno(i);
+function editarNome(nome){
+    let aluno = turmaSelecionada().getAluno(nome);
     let novoNome = prompt("Digite o novo nome do aluno:", aluno.getNome());
     if(novoNome !== null && novoNome.trim() !== "") {
         aluno.setNome(novoNome);

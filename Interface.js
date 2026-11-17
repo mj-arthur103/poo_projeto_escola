@@ -136,8 +136,8 @@ class Interface{
           lista += '<td>' + (alunos[i].notaRecuperacao !== null ? alunos[i].notaRecuperacao.toFixed(2) : '') + '</td>';
 
           lista += '<td class="editar">';
-          lista += '<button class="btn_editar" onclick="editarNome(' + i + ')">Editar Nome</button>';
-          lista += '<button class="btn_editar" onclick="editarNota(' + i + ')">Editar Notas</button>';
+          lista += '<button class="btn_editar" onclick="editarNome(\'' + alunos[i].getNome() + '\')">Editar Nome</button>';
+          lista += '<button class="btn_editar" onclick="editarNota(\'' + alunos[i].getNome() + '\')">Editar Notas</button>';
           lista += '</td>';
           lista += '</tr>';
         }

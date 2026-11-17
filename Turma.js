@@ -30,14 +30,14 @@ class Turma{
     getProfessor(){
         return this.#professor;
     }
-    setProfessor(){
+    setProfessor(professor){
         return this.#professor = professor;
     }
 
     getCurso(){
         return this.#curso;
     }
-    setCurso(){
+    setCurso(curso){
         return this.#curso = curso;
     }
 }//fim classe
